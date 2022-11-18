@@ -16,7 +16,7 @@ auth = AuthJwtCsrf()
 @router.get("/api/csrftoken",response_model=Csrf)
 async def get_csrf_token(csrf_protect: CsrfProtect = Depends()):
   csrf_token = csrf_protect.generate_csrf()
-  res = {'csrf_token: csrf_token'}
+  res = {'csrf_token': csrf_token}
   return res 
 
 @router.post("/api/register", response_model=UserInfo)
