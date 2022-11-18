@@ -131,3 +131,4 @@ dmypy.json
 
 # venvをgit管理しないようにする
 env_api
+.deta/
