@@ -49,7 +49,7 @@ async def logout(request: Request, response: Response, csrf_protect: CsrfProtect
 
 @router.get("/api/user", response_model=UserInfo)
 async def get_user_refresh_jwt(request: Request, response: Response):
-  new_token, subject = auth.verify_csrf_update_jwt(request)
+  new_token, subject = auth.verify_update_jwt(request)
   response.set_cookie(
     key="access_token", value=f"Bearer {new_token}", httponly=True, samesite="none", secure=True
   )
