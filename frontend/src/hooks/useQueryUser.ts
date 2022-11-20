@@ -3,7 +3,7 @@ import axios from "axios";
 import { UserInfo } from "../types/types";
 import { useHistory } from "react-router-dom";
 
-export const useQueryuser = () => {
+export const useQueryUser = () => {
   const history = useHistory()
   const getCurrentUser = async () => {
     const { data } = await axios.get<UserInfo>(
