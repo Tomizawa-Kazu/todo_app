@@ -11,3 +11,10 @@
 ```
 uvicorn main:app --reload
 ```
+
+
+### frontend実行方法
+```
+cd frontend
+yarn start
+```
